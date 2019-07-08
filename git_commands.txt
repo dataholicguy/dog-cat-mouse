@@ -1,0 +1,44 @@
+git status
+git log
+git show + ID
+git diff
+git add <filename>
+git add .
+git commit -m 'Comment'
+git push
+git checkout
+git reset
+git checkout -b <branch name>
+git branch
+git merge <branch name to merge>
+git reset --soft + ID
+git reset --mixed + ID
+git reset --hard + ID
+git clone <URL>
+git pull
+git fetch origin <branch_name>
+
+(*) Pull Request
+	. git checkout -b <feature_branch>
+	. git push origin <branch>
+	. create a pull request on Github
+	. review code
+		. review code online (Github)
+		. fetch branch into local test offline (optional)
+		. approve the pull request
+	. merge to master branch
+
+(*) Resolve Conflicts:
+	. When will conflicts happen?
+		1. A and B both change the same file + same line
+		2. A deleted file X, B modified file X
+
+	. Method 1: (Not recommended)
+		. Using 'git rebase'
+		. Resolve conflict
+		. Push again with -f
+
+	. Method 2:
+		. Merge updated master to feature branch
+		. Resolve conflict
+		. Commit and push
